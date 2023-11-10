@@ -48,5 +48,5 @@ const artists = fs.readdirSync('a', { withFileTypes: true })
     .map((entry) => path.join('a', entry.name));
 
 artists.forEach((artistPath) => {
-  console.log(artistPath)
+  updatePortfolio(artistPath)
 });
