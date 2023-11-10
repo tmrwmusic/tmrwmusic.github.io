@@ -2,10 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 const updatePortfolio = (configPath) => {
-  const configDir = path.dirname(configPath);
+  const configDir = path.dirname(configPath.replace("a/", ''));
   const configContent = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
-  const portfolioKey = configContent[configDir.replace("a/", '')];
+  const portfolioKey = configContent[configDir];
   if (!portfolioKey) {
     console.log(`No portfolio key found for directory ${configDir}. Skipping.`);
     return;
