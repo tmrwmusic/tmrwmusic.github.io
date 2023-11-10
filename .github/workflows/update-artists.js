@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const updatePortfolio = (configPath) => {
-  const artistName = configPath.replace("a/", "")
+    const artistName = configPath.replace("a/", "");
+    console.log(artistName);
   const configDir = path.join(configPath, "config.json");
   const configContent = JSON.parse(fs.readFileSync(configDir, 'utf8'));
 
