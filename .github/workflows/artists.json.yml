@@ -19,8 +19,8 @@ jobs:
       - name: Check working directory
         run: ls -R
 
-      - name: Create temporaryartists.json if not exists
-        run: echo "{}" > temporaryartists.json
+      - name: Create temporaryartists.json with initial structure
+        run: echo '{"Mae Tis": []}' > temporaryartists.json
 
       - name: Process config files
         run: |
