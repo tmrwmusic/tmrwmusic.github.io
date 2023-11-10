@@ -2,8 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 const updatePortfolio = (configPath) => {
-  const configDir = path.dirname(configPath.replace("a/", ''));
-  const configContent = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+  const artistName = configPath.replace("a/", "")
+  const configDir = path.join(configPath, "config.json");
+  const configContent = JSON.parse(fs.readFileSync(configDir, 'utf8'));
 
   try {
     const directories = fs.readdirSync("./", { withFileTypes: true })
@@ -15,7 +16,7 @@ const updatePortfolio = (configPath) => {
     console.error('Error reading directories:', err);
   }
     
-  const portfolioKey = configContent[configDir];
+  const portfolioKey = configContent[artistName];
   if (!portfolioKey) {
     console.log(`No portfolio key found for directory ${configDir}. Skipping.`);
     return;
@@ -42,10 +43,10 @@ const updatePortfolio = (configPath) => {
   console.log(`Portfolio updated for directory ${configDir}.`);
 };
 
-const configFiles = fs.readdirSync('a', { withFileTypes: true })
+const artists = fs.readdirSync('a', { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
-    .map((entry) => path.join('a', entry.name, 'config.json'));
+    .map((entry) => path.join('a', entry.name));
 
-configFiles.forEach((configPath) => {
-  console.log(configPath)
+artists.forEach((artistPath) => {
+  console.log(artistPath)
 });
