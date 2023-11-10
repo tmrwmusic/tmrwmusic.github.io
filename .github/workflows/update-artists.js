@@ -6,7 +6,7 @@ const updatePortfolio = (configPath) => {
   const configContent = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
   try {
-    const directories = fs.readdirSync(configPath, { withFileTypes: true })
+    const directories = fs.readdirSync("./", { withFileTypes: true })
       .filter(entry => entry.isDirectory())
       .map(entry => entry.name);
   
