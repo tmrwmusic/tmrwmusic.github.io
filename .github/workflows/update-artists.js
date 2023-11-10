@@ -5,7 +5,7 @@ const updatePortfolio = (configPath) => {
   const configDir = path.dirname(configPath);
   const configContent = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
-  const portfolioKey = configContent[configDir];
+  const portfolioKey = configContent[configDir.replace(/^a\//, '')];
   if (!portfolioKey) {
     console.log(`No portfolio key found for directory ${configDir}. Skipping.`);
     return;
