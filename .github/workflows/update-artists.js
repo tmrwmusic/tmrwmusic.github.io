@@ -44,8 +44,8 @@ const updatePortfolio = (configPath) => {
 
 const configFiles = fs.readdirSync('a', { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
-  .map((entry) => path.join('a', entry.name, 'config.json'));
+    .map((entry) => path.join('a', entry.name, 'config.json'));
 
 configFiles.forEach((configPath) => {
-  updatePortfolio(configPath);
+  console.log(configPath)
 });
