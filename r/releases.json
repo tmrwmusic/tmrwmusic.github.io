@@ -1,0 +1,23 @@
+[
+    {
+        "id": "TMRW0001",
+        "artist": ["Mae Tis"],
+        "title": "Star",
+        "type": "single",
+        "release": {
+            "date": "2023-11-24"
+        },
+        "pre-release": {
+            "date": "2023-11-17"
+        },
+        "tracks": [
+            {
+                "title": "Star",
+                "artist": ["Mae Tis"],
+                "length": "02:37",
+                "genre": "Rap",
+                "explicit": true
+            }
+        ]
+    }
+]
