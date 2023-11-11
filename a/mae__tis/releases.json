@@ -6,10 +6,7 @@
         "type": "single",
         "release": {
             "date": "2023-11-24"
-        },
-        "pre-release": {
-            "date": "2023-11-17"
-        },
+        }
         "tracks": [
             {
                 "title": "Star",
