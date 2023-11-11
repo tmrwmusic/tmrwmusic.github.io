@@ -160,6 +160,10 @@ info2>extrainfo {
     font-size: 8px;
 }
 
+newest.unloaded extrainfo {
+    margin-left: 2px;
+}
+
 info2>extrainfo>*:not(:last-child)::after {
     content: "·";
     margin: 0px 2.5px 0px 5px;
