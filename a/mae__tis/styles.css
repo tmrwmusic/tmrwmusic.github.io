@@ -8,6 +8,11 @@
     --mainAccentColor: #0A0A1F;
     --mainFont: ___;
     --secondaryFont: ___, var(--mainFont);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    user-drag: none;
+    -webkit-user-drag: none
 }
 
 body {
