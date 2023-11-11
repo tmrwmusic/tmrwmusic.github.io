@@ -169,3 +169,10 @@ info2>extrainfo>*:not(:last-child)::after {
     font-weight: 900;
     white-space-collapse: break-spaces;
 }
+
+newest.unloaded info2>extrainfo>*:not(:last-child)::after {
+    content: "·";
+    margin: 0px 10px 0px 10px;
+    font-weight: 900;
+    white-space-collapse: break-spaces;
+}
