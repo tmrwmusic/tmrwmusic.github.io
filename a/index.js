@@ -13,9 +13,19 @@ function setLatestRelease(releases, artists) {
         latestReleaseHTML.classList.add("explicit");
     };
 
+    let artistsList;
+
+    latestRelease.artist.main.array.forEach(artist => {
+        artistsList += '<span artist="main"><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></span>'
+    });
+
+    latestRelease.artist.featured.array.forEach(artist => {
+        artistsList += '<span artist="feat"><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></span>'
+    });
+
     latestReleaseHTML.querySelector("cover").style.background = "url(/r/res/cvr/" + latestRelease.id + ".png)";
-    latestReleaseHTML.querySelector("reltitle").textContent = latestRelease.title;
-    latestReleaseHTML.querySelector("relartist").textContent = latestRelease.artist;
+    latestReleaseHTML.querySelector("reltitle").innerHTML = '<a href="/r/' + latestRelease.id + '">' + latestRelease.title + '</a>';
+    latestReleaseHTML.querySelector("relartist").innerHTML = artistsList;
     latestReleaseHTML.querySelector("extrainfo").querySelector("type").textContent = latestRelease.type;
     latestReleaseHTML.querySelector("extrainfo").querySelector("dateofrel").textContent = latestRelease.release.date.toLocaleString();
     latestReleaseHTML.style.background = latestRelease.colors[0];

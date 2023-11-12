@@ -1,7 +1,7 @@
 [
     {
         "id": "TMRW0001",
-        "artist": ["Mae Tis"],
+        "artist": {"main": ["Mae Tis"], "featured": []},
         "title": "Star",
         "type": "single",
         "release": {
@@ -10,7 +10,7 @@
         "tracks": [
             {
                 "title": "Star",
-                "artist": ["Mae Tis"],
+                "artist": {"main": ["Mae Tis"], "featured": []},
                 "length": "02:37",
                 "genre": "Rap",
                 "explicit": true
