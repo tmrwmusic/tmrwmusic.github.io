@@ -6,7 +6,7 @@
         "type": "single",
         "release": {
             "date": "2023-11-24"
-        }
+        },
         "tracks": [
             {
                 "title": "Star",
@@ -15,6 +15,7 @@
                 "genre": "Rap",
                 "explicit": true
             }
-        ]
+        ],
+        "colors": ["#0F0F0F", "#D8D8D8"]
     }
 ]

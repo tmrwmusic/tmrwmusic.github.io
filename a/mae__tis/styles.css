@@ -145,6 +145,7 @@ info2>relartist {
 info2>reltitle {
     font-size: 24px;
     font-weight: 900;
+    line-height: 1;
 }
 
 newest.unloaded info1 {
@@ -162,6 +163,7 @@ newest.unloaded relartist {
 info2>extrainfo {
     font-weight: 300;
     font-size: 8px;
+    text-transform: uppercase;
 }
 
 newest.unloaded extrainfo {
