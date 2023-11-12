@@ -13,13 +13,13 @@ function setLatestRelease(releases, artists) {
         latestReleaseHTML.classList.add("explicit");
     };
 
-    let artistsList;
+    let artistsList = "";
 
-    latestRelease.artist.main.array.forEach(artist => {
+    latestRelease.artist.main.forEach(artist => {
         artistsList += '<span artist="main"><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></span>'
     });
 
-    latestRelease.artist.featured.array.forEach(artist => {
+    latestRelease.artist.featured.forEach(artist => {
         artistsList += '<span artist="feat"><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></span>'
     });
 
