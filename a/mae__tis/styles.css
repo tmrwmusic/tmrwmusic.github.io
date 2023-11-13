@@ -208,3 +208,9 @@ info1>id {
     font-weight: 500;
     font-style: italic;
 }
+
+.unloaded info1>id {
+    right: 0.5px;
+    position: relative;
+    font-style: normal;
+}
