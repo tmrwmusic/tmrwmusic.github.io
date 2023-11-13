@@ -1,7 +1,7 @@
 async function loadResources() {
     var releases = await fetch("releases.json").then(response => response.json());
     var artists = await fetch("/a/artists.json").then(response => response.json());
-    setTimeout(setLatestRelease(releases, artists), 1000)
+    setTimeout(setLatestRelease(releases, artists), 3000)
 }
 
 function setLatestRelease(releases, artists) {
