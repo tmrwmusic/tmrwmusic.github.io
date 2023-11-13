@@ -1,7 +1,7 @@
 async function loadResources() {
     var releases = await fetch("releases.json").then(response => response.json());
     var artists = await fetch("/a/artists.json").then(response => response.json());
-    setLatestRelease(releases, artists);
+    setTimeout(setLatestRelease(releases, artists), 1000)
 }
 
 function setLatestRelease(releases, artists) {
@@ -24,6 +24,7 @@ function setLatestRelease(releases, artists) {
     });
 
     latestReleaseHTML.querySelector("cover").style.background = "url(/r/res/cvr/" + latestRelease.id + ".png)";
+    latestReleaseHTML.querySelector("id").textContent = '<a href="/r/' + latestRelease.id + '">' + latestRelease.id + '</a>';
     latestReleaseHTML.querySelector("reltitle").innerHTML = '<a href="/r/' + latestRelease.id + '">' + latestRelease.title + '</a>';
     latestReleaseHTML.querySelector("relartist").innerHTML = artistsList;
     latestReleaseHTML.querySelector("extrainfo").querySelector("type").textContent = latestRelease.type;
