@@ -16,11 +16,11 @@ function setLatestRelease(releases, artists) {
     let artistsList = "";
 
     latestRelease.artist.main.forEach(artist => {
-        artistsList += '<span artist="main"><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></span>'
+        artistsList += '<artistmain><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistmain>'
     });
 
     latestRelease.artist.featured.forEach(artist => {
-        artistsList += '<span artist="feat"><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></span>'
+        artistsList += '<artistfeat><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistfeat>'
     });
 
     latestReleaseHTML.querySelector("cover").style.background = "url(/r/res/cvr/" + latestRelease.id + ".png)";

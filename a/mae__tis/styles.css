@@ -196,3 +196,8 @@ relinfo a:hover {
     color: inherit;
     text-decoration: underline 0.25px;
 }
+
+artistmain:first-of-type::before, artistfeat:first-of-type::before {content: ""}
+artistmain:last-of-type::before, artistfeat:last-of-type::before {content: " & "}
+artistmain::before, artistfeat::before {content: ", "}
+artistfeat:first-of-type::before {content: " feat. "}
