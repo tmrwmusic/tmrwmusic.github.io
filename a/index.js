@@ -6,7 +6,6 @@ async function loadResources() {
 
 function setLatestRelease(releases, artists) {
     const latestRelease = releases[releases.length - 1];
-    console.log(latestRelease);
     const latestReleaseHTML = document.querySelector("newest");
 
     if (latestRelease.tracks.some(track => track.explicit === true)) {
