@@ -28,7 +28,7 @@ function setLatestRelease(releases, artists) {
     latestReleaseHTML.querySelector("relartist").innerHTML = artistsList;
     latestReleaseHTML.querySelector("extrainfo").querySelector("type").textContent = latestRelease.type;
     latestReleaseHTML.querySelector("extrainfo").querySelector("dateofrel").textContent = latestRelease.release.date.toLocaleString();
-    latestReleaseHTML.style.background = latestRelease.colors[0];
-    latestReleaseHTML.style.color = latestRelease.colors[1];
+    latestReleaseHTML.style.setProperty("--RELEASEPrimaryColor", latestRelease.colors[0]);
+    latestReleaseHTML.style.setProperty("--RELEASESecondaryColor", latestRelease.colors[1]);
     latestReleaseHTML.classList.remove("unloaded");
 }

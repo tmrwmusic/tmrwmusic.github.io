@@ -92,6 +92,8 @@ newest {
     align-items: flex-start;
     padding: 14px;
     font-size: 16px;
+    background: var(--RELEASEPrimaryColor);
+    color: var(--RELEASESecondaryColor);
 }
 
 newest.unloaded {
@@ -100,7 +102,7 @@ newest.unloaded {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-name: placeholderAnimate;
-    background: #f6f7f8; /*Fallback*/
+    background: #f6f7f8;
     background: linear-gradient(to right, #444 3.125%, #666 28.125%, #888 51.5625%, #666 75%, #444 100%);
     background-size: 1300px;
 }
@@ -213,4 +215,21 @@ info1>id {
     right: 0.5px;
     position: relative;
     font-style: normal;
+}
+
+.explicit>relinfo>info2>reltitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.explicit>relinfo>info2>reltitle::after {
+    content: "explicit";
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-left: 10px;
+    color: var(--RELEASEPrimaryColor);
+    background: var(--RELEASESecondaryColor);
+    padding: 3px 5px;
+    border-radius: 5px;
 }
