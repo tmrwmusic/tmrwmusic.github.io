@@ -66,7 +66,7 @@ function setLatestRelease(releases, artists) {
     latestReleaseHTML.querySelector("relartist").innerHTML = artistsList;
     latestReleaseHTML.querySelector("extrainfo").querySelector("type").textContent = latestRelease.type;
     latestReleaseHTML.querySelector("extrainfo").querySelector("dateofrel").textContent = latestRelease.release.date.toLocaleString();
-    latestReleaseHTML.querySelector("extrainfo").querySelector("playtime").textContent = `${totalMinutes}:${totalSeconds}`;
+    latestReleaseHTML.querySelector("extrainfo").querySelector("playtime").textContent = formattedDuration;
     latestReleaseHTML.querySelector("tracks").innerHTML = tracksHTML;
     latestReleaseHTML.style.setProperty("--RELEASEPrimaryColor", latestRelease.colors[0]);
     latestReleaseHTML.style.setProperty("--RELEASESecondaryColor", latestRelease.colors[1]);
