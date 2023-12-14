@@ -43,6 +43,23 @@ function setLatestRelease(releases, artists) {
     } else {
         formattedDuration += `${String(totalMinutes).padStart(2, '0')}:${String(totalSeconds).padStart(2, '0')}`;
     };
+
+    let tracksHTML = "";
+    latestRelease.tracks.forEach((track) => {
+        let artistsList = "";
+
+    track.artist.main.forEach(artist => {
+        artistsList += '<artistmain><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistmain>'
+    });
+
+    track.artist.featured.forEach(artist => {
+        artistsList += '<artistfeat><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistfeat>'
+    });
+        tracksHTML += `<reltrack><left><index>` + (latestRelease.tracks.indexOf(track) + 1) + `</index><data><name>` + latestRelease.tracks[track].title + `</name><artists>` + artistsList + `</artists></data></left><right><playtime>` + latestRelease.tracks[track].length + `</playtime></right></reltrack>`;
+    })
+    
+
+    
     latestReleaseHTML.querySelector("cover").style.background = "url(/r/res/cvr/" + latestRelease.id + ".png)";
     latestReleaseHTML.querySelector("id").innerHTML = '<a href="/r/' + latestRelease.id + '">' + latestRelease.id + '</a>';
     latestReleaseHTML.querySelector("reltitle").innerHTML = '<a href="/r/' + latestRelease.id + '">' + latestRelease.title + '</a>';
@@ -50,6 +67,7 @@ function setLatestRelease(releases, artists) {
     latestReleaseHTML.querySelector("extrainfo").querySelector("type").textContent = latestRelease.type;
     latestReleaseHTML.querySelector("extrainfo").querySelector("dateofrel").textContent = latestRelease.release.date.toLocaleString();
     latestReleaseHTML.querySelector("extrainfo").querySelector("playtime").textContent = `${totalMinutes}:${totalSeconds}`;
+    latestReleaseHTML.querySelector("tracks").innerHTML = tracksHTML;
     latestReleaseHTML.style.setProperty("--RELEASEPrimaryColor", latestRelease.colors[0]);
     latestReleaseHTML.style.setProperty("--RELEASESecondaryColor", latestRelease.colors[1]);
     latestReleaseHTML.classList.remove("unloaded");
