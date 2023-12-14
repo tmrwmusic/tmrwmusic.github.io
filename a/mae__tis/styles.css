@@ -227,7 +227,7 @@ newest.explicit>rel>relinfo>info2>reltitle {
     align-items: center; 
 }
 
-newest.explicit>rel>relinfo>info2>reltitle::after, newest tracks>reltrack data>name::after{
+newest.explicit>rel>relinfo>info2>reltitle::after, newest tracks>reltrack.explicit data>name::after{
     text-transform: uppercase;
     color: var(--RELEASEPrimaryColor);
     background: var(--RELEASESecondaryColor);
@@ -243,7 +243,7 @@ newest.explicit>rel>relinfo>info2>reltitle::after {
     padding: 3px 5px;
 }
 
-newest tracks>reltrack data>name::after {
+newest tracks>reltrack.explicit data>name::after {
     content: "e";
     font-size: 9px;
     margin-left: 5px;

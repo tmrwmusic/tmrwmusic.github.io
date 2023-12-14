@@ -47,6 +47,13 @@ function setLatestRelease(releases, artists) {
     let tracksHTML = "";
     latestRelease.tracks.forEach((track) => {
         let artistsList = "";
+        if (latestRelease.tracks[latestRelease.tracks.indexOf(track)].explicit = true) {
+            var ratingTag = ' class="explicit"'
+        } else if (latestRelease.tracks[latestRelease.tracks.indexOf(track)].explicit = false) {
+            var ratingTag = ' class="clean"'
+        } else if (latestRelease.tracks[latestRelease.tracks.indexOf(track)].explicit = null) {
+            var ratingTag = ''
+        };
 
     track.artist.main.forEach(artist => {
         artistsList += '<artistmain><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistmain>'
@@ -55,7 +62,7 @@ function setLatestRelease(releases, artists) {
     track.artist.featured.forEach(artist => {
         artistsList += '<artistfeat><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistfeat>'
     });
-        tracksHTML += `<reltrack><left><index>` + (latestRelease.tracks.indexOf(track) + 1) + `</index><data><name>` + latestRelease.tracks[latestRelease.tracks.indexOf(track)].title + `</name><artists>` + artistsList + `</artists></data></left><right><playtime>` + latestRelease.tracks[latestRelease.tracks.indexOf(track)].length + `</playtime></right></reltrack>`;
+        tracksHTML += `<reltrack` + ratingTag + `><left><index>` + (latestRelease.tracks.indexOf(track) + 1) + `</index><data><name>` + latestRelease.tracks[latestRelease.tracks.indexOf(track)].title + `</name><artists>` + artistsList + `</artists></data></left><right><playtime>` + latestRelease.tracks[latestRelease.tracks.indexOf(track)].length + `</playtime></right></reltrack>`;
     })
     
 
