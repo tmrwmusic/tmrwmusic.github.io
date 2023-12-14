@@ -47,7 +47,7 @@ function setLatestRelease(releases, artists) {
     if (latestRelease.tracks.length > 1) {
         let tracksHTML = "";
         latestRelease.tracks.forEach((track) => {
-            let artistsList = "";
+            var artistsList = "";
             if (latestRelease.tracks[latestRelease.tracks.indexOf(track)].explicit = true) {
                 var ratingTag = ' class="explicit"'
             } else if (latestRelease.tracks[latestRelease.tracks.indexOf(track)].explicit = false) {
@@ -77,7 +77,7 @@ function setLatestRelease(releases, artists) {
     latestReleaseHTML.querySelector("extrainfo").querySelector("dateofrel").textContent = latestRelease.release.date.toLocaleString();
     latestReleaseHTML.querySelector("extrainfo").querySelector("playtime").textContent = formattedDuration;
     if (latestRelease.tracks.length > 1) {
-        latestReleaseHTML.querySelector("rel").parentNode.insertBefore(`<hr>`, latestReleaseHTML.querySelector("rel").nextSibling);
+        latestReleaseHTML.querySelector("rel").parentNode.insertBefore(document.createElement("hr"), latestReleaseHTML.querySelector("rel").nextSibling);
         latestReleaseHTML.querySelector("tracks").innerHTML = tracksHTML;
     } else {
         latestReleaseHTML.querySelector("tracks").remove();
