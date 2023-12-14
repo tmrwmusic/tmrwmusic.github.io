@@ -22,12 +22,34 @@ function setLatestRelease(releases, artists) {
         artistsList += '<artistfeat><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistfeat>'
     });
 
+    let totalDurationInSeconds = 0;
+
+    // Iterate through each track and add its duration to the total
+    latestRelease.tracks.forEach(track => {
+        const durationComponents = track.length.split(':');
+        const trackDurationInSeconds = parseInt(durationComponents[0]) * 60 + parseInt(durationComponents[1]);
+        totalDurationInSeconds += trackDurationInSeconds;
+    });
+
+    const totalHours = Math.floor(totalDurationInSeconds / 3600);
+    const remainingSeconds = totalDurationInSeconds % 3600;
+    const totalMinutes = Math.floor(remainingSeconds / 60);
+    const totalSeconds = remainingSeconds % 60;
+    
+    // Construct the formatted duration string (h:mm:ss)
+    let formattedDuration = '';
+    if (totalHours > 0) {
+        formattedDuration += `${String(totalHours).padStart(2, '0')}:${String(totalMinutes).padStart(2, '0')}:${String(totalSeconds).padStart(2, '0')}`;
+    } else {
+        formattedDuration += `${String(totalMinutes).padStart(2, '0')}:${String(totalSeconds).padStart(2, '0')}`;
+    };
     latestReleaseHTML.querySelector("cover").style.background = "url(/r/res/cvr/" + latestRelease.id + ".png)";
     latestReleaseHTML.querySelector("id").innerHTML = '<a href="/r/' + latestRelease.id + '">' + latestRelease.id + '</a>';
     latestReleaseHTML.querySelector("reltitle").innerHTML = '<a href="/r/' + latestRelease.id + '">' + latestRelease.title + '</a>';
     latestReleaseHTML.querySelector("relartist").innerHTML = artistsList;
     latestReleaseHTML.querySelector("extrainfo").querySelector("type").textContent = latestRelease.type;
     latestReleaseHTML.querySelector("extrainfo").querySelector("dateofrel").textContent = latestRelease.release.date.toLocaleString();
+    latestReleaseHTML.querySelector("extrainfo").querySelector("playtime").textContent = `${totalMinutes}:${totalSeconds}`;
     latestReleaseHTML.style.setProperty("--RELEASEPrimaryColor", latestRelease.colors[0]);
     latestReleaseHTML.style.setProperty("--RELEASESecondaryColor", latestRelease.colors[1]);
     latestReleaseHTML.classList.remove("unloaded");
