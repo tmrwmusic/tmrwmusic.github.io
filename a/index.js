@@ -44,8 +44,8 @@ function setLatestRelease(releases, artists) {
         formattedDuration += `${String(totalMinutes).padStart(2, '0')}:${String(totalSeconds).padStart(2, '0')}`;
     };
 
+    let tracksHTML = "";
     if (latestRelease.tracks.length > 1) {
-        let tracksHTML = "";
         latestRelease.tracks.forEach((track) => {
             var artistsList = "";
             if (latestRelease.tracks[latestRelease.tracks.indexOf(track)].explicit = true) {
@@ -77,10 +77,10 @@ function setLatestRelease(releases, artists) {
     latestReleaseHTML.querySelector("extrainfo").querySelector("dateofrel").textContent = latestRelease.release.date.toLocaleString();
     latestReleaseHTML.querySelector("extrainfo").querySelector("playtime").textContent = formattedDuration;
     if (latestRelease.tracks.length > 1) {
-        latestReleaseHTML.querySelector("rel").parentNode.insertBefore(document.createElement("hr"), latestReleaseHTML.querySelector("rel").nextSibling);
         latestReleaseHTML.querySelector("tracks").innerHTML = tracksHTML;
     } else {
         latestReleaseHTML.querySelector("tracks").remove();
+        latestReleaseHTML.querySelector("rel + hr").remove();
     };
     latestReleaseHTML.style.setProperty("--RELEASEPrimaryColor", latestRelease.colors[0]);
     latestReleaseHTML.style.setProperty("--RELEASESecondaryColor", latestRelease.colors[1]);
