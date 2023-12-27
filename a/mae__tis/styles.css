@@ -31,8 +31,6 @@ body {
 }
 
 page {
-    height: 95vh;
-    aspect-ratio: 9/16;
     display: flex;
     flex-direction: column;
     border-radius: 30px;
@@ -42,6 +40,20 @@ page {
     scrollbar-width: none;
     align-content: center;
     align-items: center;
+}
+
+@media screen and (orientation: landscape) {
+    page {
+        height: 95vh;
+        aspect-ratio: 9/16;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    page {
+        height: 100vh;
+        width: 100vw;
+    }
 }
 
 banner {
