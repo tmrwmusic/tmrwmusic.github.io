@@ -1,7 +1,8 @@
 async function loadResources() {
     var releases = await fetch("releases.json").then(response => response.json());
     var artists = await fetch("/a/artists.json").then(response => response.json());
-    setTimeout(setLatestRelease(releases, artists), 3000)
+    setTimeout(setLatestRelease(releases, artists), 3000);
+    setTimeout(showReleases(releases, artists), 3000);
 }
 
 function setLatestRelease(releases, artists) {
@@ -85,4 +86,35 @@ function setLatestRelease(releases, artists) {
     latestReleaseHTML.style.setProperty("--RELEASEPrimaryColor", latestRelease.colors[0]);
     latestReleaseHTML.style.setProperty("--RELEASESecondaryColor", latestRelease.colors[1]);
     latestReleaseHTML.classList.remove("unloaded");
+}
+
+function showReleases(releases, artists) {
+    const olderReleasesArray = releases.slice(0, -1).reverse();
+    var pageHTML = document.querySelector("body").querySelector("page");
+
+    olderReleasesArray.forEach((release) => {
+        let releaseHTML = document.createElement("release");
+        if (release.tracks.some(track => track.explicit === true)) {
+            releaseHTML.classList.add("explicit");
+        };
+        releaseHTML.innerHTML += "<id><a href='/r/" + release.id + "'>" + release.id + "</a></id>";
+        releaseHTML.innerHTML += "<reltitle><a href='/r/" + release.id + "'>" + release.title + "</a></reltitle>";
+
+        let artistsList = "";
+
+        release.artist.main.forEach(artist => {
+            artistsList += '<artistmain><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistmain>'
+        });
+
+        release.artist.featured.forEach(artist => {
+            artistsList += '<artistfeat><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistfeat>'
+        });
+
+        releaseHTML.innerHTML += "<relartist>" + artistsList + "</relartist>";
+
+        releaseHTML.style.setProperty("--RELEASEPrimaryColor", release.colors[0]);
+        releaseHTML.style.setProperty("--RELEASESecondaryColor", release.colors[1]);
+        releaseHTML.style.backgroundImage = "url(/r/res/cvr/" + release.id + ".png)";
+        pageHTML.appendChild(releaseHTML);
+    })
 }
