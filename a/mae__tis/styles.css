@@ -33,7 +33,6 @@ body {
 page {
     display: flex;
     flex-direction: column;
-    border-radius: 30px;
     background-color: var(--mainAccentColor);
     overflow: scroll;
     -ms-overflow-style: none;
@@ -46,6 +45,7 @@ page {
     page {
         height: 95vh;
         aspect-ratio: 9/16;
+        border-radius: 30px;
     }
 }
 
