@@ -344,6 +344,12 @@ release {
         line-height: 16px;
         }
     & a {
-        all: unset;
+        color: unset;
+    }
+    & a:not(:hover) {
+        text-decoration: none;
+    }
+    & a:hover {
+        text-decoration: underline;
     }
 }
