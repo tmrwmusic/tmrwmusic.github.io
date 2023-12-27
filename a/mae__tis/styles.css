@@ -45,7 +45,7 @@ page {
 @media screen and (min-aspect-ratio: 0.74) {
     page {
         height: 95vh;
-        aspect-ratio: 9/16;
+        width: calc(95vh/16*9);
         border-radius: 30px;
     }
 }
