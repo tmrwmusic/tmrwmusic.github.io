@@ -343,4 +343,7 @@ release {
         font-weight: 500;
         line-height: 16px;
         }
+    & a {
+        all: unset;
     }
+}
