@@ -39,7 +39,7 @@ page {
     scrollbar-width: none;
     align-content: center;
     align-items: center;
-    transition: height 0.5s cubic-bezier(.75,0,.25,1), width 0.5s cubic-bezier(.75,0,.25,1), border-radius 0.5s cubic-bezier(.75,0,.25,1), ;
+    transition: height 0.5s cubic-bezier(.75,0,.25,1) 0.5s, width 0.5s cubic-bezier(.75,0,.25,1) 0.5s, border-radius 0.5s cubic-bezier(.75,0,.25,1) 0.5s;
 }
 
 @media screen and (min-aspect-ratio: 0.6) {
