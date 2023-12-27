@@ -39,6 +39,7 @@ page {
     scrollbar-width: none;
     align-content: center;
     align-items: center;
+    transition: height 0.5s cubic-bezier(.75,0,.25,1), width 0.5s cubic-bezier(.75,0,.25,1), border-radius 0.5s cubic-bezier(.75,0,.25,1), ;
 }
 
 @media screen and (min-aspect-ratio: 0.6) {
@@ -53,6 +54,7 @@ page {
     page {
         height: 100vh;
         width: 100vw;
+        border-radius: 0px;
     }
 }
 
