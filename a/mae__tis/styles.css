@@ -107,7 +107,7 @@ newest {
     color: var(--RELEASESecondaryColor);
     padding: 14px;
     margin-bottom: 10px;
-    & rel {
+    rel {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -218,7 +218,7 @@ relinfo a:hover, tracks a:hover {
     text-decoration: underline 0.25px;
 }
 
-artistmain:last-of-type::before, artistfeat:last-of-type::before {content: " & "}
+artistmain:last-of-type::before, artistfeat:last-of-type::before {content: " "}
 artistmain:first-of-type::before, artistfeat:first-of-type::before {content: ""}
 artistmain::before, artistfeat::before {content: ", "}
 artistfeat:first-of-type::before {content: " feat. "}
@@ -341,29 +341,29 @@ release {
     color: var(--RELEASESecondaryColor);
     margin-bottom: 10px;
 
-    & reltitle {
+    reltitle {
         font-size: 24px;
         font-weight: 900;
         line-height: 1;
-        }
+    }
     
-    & relartist {
+    relartist {
         font-size: 10px;
         font-weight: 500;
-        }
+    }
     
-    & id {
+    id {
         font-size: 8px;
         font-weight: 500;
         line-height: 16px;
-        }
-    & a {
+    }
+    a {
         color: unset;
     }
-    & a:not(:hover) {
+    a:not(:hover) {
         text-decoration: none;
     }
-    & a:hover {
+    a:hover {
         text-decoration: underline;
     }
 }
