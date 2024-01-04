@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Horizon';
+    src: url('horizon.woff2') format('woff2'),
+         url('horizon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Horizon';
+    src: url('horizon_outlined.woff2') format('woff2'),
+         url('horizon_outlined.woff') format('woff');
+    font-weight: normal;
+    font-style: "outline";
+
+}
