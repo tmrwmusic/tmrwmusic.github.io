@@ -8,10 +8,10 @@
 }
 
 @font-face {
-    font-family: 'Horizon';
+    font-family: 'Horizon Outline';
     src: url('horizon_outlined.woff2') format('woff2'),
          url('horizon_outlined.woff') format('woff');
     font-weight: normal;
-    font-style: "outline";
+    font-style: normal;
 
 }
