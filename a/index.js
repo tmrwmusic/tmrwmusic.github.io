@@ -75,7 +75,7 @@ function setLatestRelease(releases, artists) {
     latestReleaseHTML.querySelector("reltitle").innerHTML = '<a href="/r/' + latestRelease.id + '">' + latestRelease.title + '</a>';
     latestReleaseHTML.querySelector("relartist").innerHTML = artistsList;
     latestReleaseHTML.querySelector("extrainfo").querySelector("type").textContent = latestRelease.type;
-    latestReleaseHTML.querySelector("extrainfo").querySelector("dateofrel").textContent = latestRelease.release.date.toLocaleString();
+    latestReleaseHTML.querySelector("extrainfo").querySelector("dateofrel").textContent = new Date(latestRelease.release.date).toLocaleString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'});
     latestReleaseHTML.querySelector("extrainfo").querySelector("playtime").textContent = formattedDuration;
     if (latestRelease.tracks.length > 1) {
         latestReleaseHTML.querySelector("tracks").innerHTML = tracksHTML;

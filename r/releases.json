@@ -52,9 +52,36 @@
         "colors": ["#040404", "#C8C8C8"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/3iDQWTgNNDk0LvTRbjZW8p",
+            "itunes": "https://music.apple.com/no/album/tell-me-4d-single/1721034715",
             "youtubemusic": "https://www.youtube.com/playlist?list=OLAK5uy_mmz1hpgJzxsDaA--HLgM9fJcVuQALmCl4",
             "deezer": "https://www.deezer.com/en/album/523042722",
             "soundcloud": "https://soundcloud.com/maetis-music/sets/tell-me-x-4d"
+        }
+    },
+    {
+        "id": "TMRW0003",
+        "artist": {"main": ["Mae Tis"], "featured": []},
+        "title": "Nevrátiť sa Späť",
+        "type": "single",
+        "release": {
+            "date": "2023-12-31"
+        },
+        "tracks": [
+            {
+                "title": "Nevrátiť sa Späť",
+                "artist": {"main": ["Mae Tis"], "featured": []},
+                "length": "03:12",
+                "genre": "Rap",
+                "explicit": true
+            }
+        ],
+        "colors": ["#D2D0C9", "#040404"],
+        "platforms": {
+            "spotify": "https://open.spotify.com/album/0Wk84LzUO0CUJGRGmaWvFs",
+            "itunes": "",
+            "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_meE1dDatAIVSdkPOV59XF_rlOj5ps0q-I",
+            "deezer": "https://www.deezer.com/en/album/531019242",
+            "soundcloud": "https://soundcloud.com/maetis-music/nevr-ti-sa-sp"
         }
     }
 ]
