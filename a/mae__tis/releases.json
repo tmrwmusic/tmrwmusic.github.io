@@ -75,7 +75,7 @@
                 "explicit": true
             }
         ],
-        "colors": ["#D2D0C9", "#040404"],
+        "colors": ["#040404", "#D2D0C9"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/0Wk84LzUO0CUJGRGmaWvFs",
             "itunes": "",
