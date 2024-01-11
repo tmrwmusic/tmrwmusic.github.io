@@ -78,10 +78,36 @@
         "colors": ["#D2D0C9", "#040404"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/0Wk84LzUO0CUJGRGmaWvFs",
-            "itunes": "",
+            "itunes": "https://music.apple.com/no/album/nevr%C3%A1ti%C5%A5-sa-sp%C3%A4%C5%A5-single/1724174125",
             "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_meE1dDatAIVSdkPOV59XF_rlOj5ps0q-I",
             "deezer": "https://www.deezer.com/en/album/531019242",
             "soundcloud": "https://soundcloud.com/maetis-music/nevr-ti-sa-sp"
+        }
+    },
+    {
+        "id": "TMRW0004",
+        "artist": {"main": ["Mae Tis", "22Klaosso"], "featured": []},
+        "title": "Zdola Nahor",
+        "type": "single",
+        "release": {
+            "date": "2024-01-06"
+        },
+        "tracks": [
+            {
+                "title": "Zdola Nahor",
+                "artist": {"main": ["Mae Tis", "22Klaosso"], "featured": []},
+                "length": "02:52",
+                "genre": "Rap",
+                "explicit": true
+            }
+        ],
+        "colors": ["#1B1F27", "#DFE1E6"],
+        "platforms": {
+            "spotify": "",
+            "itunes": "",
+            "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_mizErvm5IJX31OJEB3A5c5S5tfjWLwi1Q",
+            "deezer": "https://www.deezer.com/en/album/533745522",
+            "soundcloud": ""
         }
     }
 ]
