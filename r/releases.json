@@ -22,7 +22,7 @@
             "itunes": "https://music.apple.com/us/album/star-single/1716418671",
             "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_l2hJ1MLGNIqkTvFqiQ7BaZh02H9SMwBz4",
             "deezer": "https://www.deezer.com/en/album/512204661",
-            "soundcloud": "https://soundcloud.com/maelis-work/star"
+            "soundcloud": "https://soundcloud.com/maetis-music/star"
         }
     },
     {
@@ -103,7 +103,7 @@
         ],
         "colors": ["#1B1F27", "#DFE1E6"],
         "platforms": {
-            "spotify": "",
+            "spotify": "https://open.spotify.com/artist/6oCCE03A3e8SjVEBzhiGHQ",
             "itunes": "",
             "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_mizErvm5IJX31OJEB3A5c5S5tfjWLwi1Q",
             "deezer": "https://www.deezer.com/en/album/533745522",
