@@ -1,8 +1,28 @@
 async function loadResources() {
-    var releases = await fetch("releases.json").then(response => response.json());
+    const currentArtist = window.location.pathname.split("/")[window.location.pathname.split("/").length - 2];
+    var releases = await fetch("/r/releases.json").then(response => response.json());
     var artists = await fetch("/a/artists.json").then(response => response.json());
-    setTimeout(setLatestRelease(releases, artists), 3000);
-    setTimeout(showReleases(releases, artists), 3000);
+
+    let artistName = null;
+    for (const name in artists) {
+        const artistData = artists[name];
+        const foundArtist = artistData.find(artist => artist.portfolioLINK === currentArtist);
+
+        if (foundArtist) {
+            artistName = name;
+            break;
+        }
+    }
+
+    var artistReleases = releases.filter(release => {
+        const mainArtists = release.artist.main;
+        const featuredArtists = release.artist.featured;
+
+        return mainArtists.includes(artistName) || (featuredArtists && featuredArtists.includes(artistName));
+    });
+
+    setTimeout(setLatestRelease(artistReleases, artists), 3000);
+    setTimeout(showReleases(artistReleases, artists), 3000);
 }
 
 function setLatestRelease(releases, artists) {
