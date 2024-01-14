@@ -83,28 +83,28 @@ header {
     }
 }
 
-info1 {
-    top: -5px;
+latestreleasebanner info1 {
+    top: -15px;
     position: relative;
     font-weight: 300;
     font-size: 32px;
 }
 
-info1>id {
+latestreleasebanner info1>id {
     font-size: 18px;
     line-height: 10px;
     font-weight: 500;
     font-style: italic;
 }
 
-relinfo {
+latestreleasebanner relinfo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 200px;
 }
 
-info2>* {
+latestreleasebanner info2>* {
     display: block;
 }
 
