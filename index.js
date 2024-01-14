@@ -51,4 +51,5 @@ function setLatestRelease(releases, artists) {
     latestReleaseHTML.querySelector("extrainfo").querySelector("playtime").textContent = formattedDuration;
     document.querySelector("html").style.setProperty("--LATESTRELEASEPrimaryColor", latestRelease.colors[0]);
     document.querySelector("html").style.setProperty("--LATESTRELEASESecondaryColor", latestRelease.colors[1]);
+    latestReleaseHTML.classList.remove("unloaded");
 }
