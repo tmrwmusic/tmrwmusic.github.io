@@ -2,6 +2,7 @@ async function loadResources() {
     const currentArtist = window.location.pathname.split("/")[window.location.pathname.split("/").length - 2];
     var releases = await fetch("/r/releases.json").then(response => response.json());
     var artists = await fetch("/a/artists.json").then(response => response.json());
+    var songs = await fetch("/s/songs.json").then(response => response.json());
 
     let artistName = null;
     for (const name in artists) {
@@ -21,17 +22,17 @@ async function loadResources() {
         return mainArtists.includes(artistName) || (featuredArtists && featuredArtists.includes(artistName));
     });
 
-    setTimeout(setLatestRelease(artistReleases, artists), 3000);
-    setTimeout(showReleases(artistReleases, artists), 3000);
+    setTimeout(setLatestRelease(artistReleases, artists, songs), 3000);
+    setTimeout(showReleases(artistReleases, artists, songs), 3000);
 }
 
-function setLatestRelease(releases, artists) {
+function setLatestRelease(releases, artists, songs) {
     const latestRelease = releases[releases.length - 1];
     const latestReleaseHTML = document.querySelector("newest");
 
-    if (latestRelease.tracks.some(track => track.explicit === true)) {
+    if (latestRelease.tracks.some(trackId => songs[trackId].explicit === true)) {
         latestReleaseHTML.classList.add("explicit");
-    };
+    }
 
     let artistsList = "";
 
@@ -45,8 +46,9 @@ function setLatestRelease(releases, artists) {
 
     let totalDurationInSeconds = 0;
 
-    // Iterate through each track and add its duration to the total
-    latestRelease.tracks.forEach(track => {
+    latestRelease.tracks.forEach(trackId => {
+        const track = songs[trackId];
+    
         const durationComponents = track.length.split(':');
         const trackDurationInSeconds = parseInt(durationComponents[0]) * 60 + parseInt(durationComponents[1]);
         totalDurationInSeconds += trackDurationInSeconds;
@@ -67,25 +69,28 @@ function setLatestRelease(releases, artists) {
 
     let tracksHTML = "";
     if (latestRelease.tracks.length > 1) {
-        latestRelease.tracks.forEach((track) => {
+        latestRelease.tracks.forEach(trackId => {
+            const track = songs[trackId];
+
             var artistsList = "";
-            if (latestRelease.tracks[latestRelease.tracks.indexOf(track)].explicit = true) {
-                var ratingTag = ' class="explicit"'
-            } else if (latestRelease.tracks[latestRelease.tracks.indexOf(track)].explicit = false) {
-                var ratingTag = ' class="clean"'
-            } else if (latestRelease.tracks[latestRelease.tracks.indexOf(track)].explicit = null) {
-                var ratingTag = ''
-            };
+            if (track.explicit == true) {
+                var ratingTag = ' class="explicit"';
+            } else if (track.explicit == false) {
+                var ratingTag = ' class="clean"';
+            } else if (track.explicit == null) {
+                var ratingTag = '';
+            }
 
             track.artist.main.forEach(artist => {
-                artistsList += '<artistmain><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistmain>'
+                artistsList += '<artistmain><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistmain>';
             });
 
             track.artist.featured.forEach(artist => {
-                artistsList += '<artistfeat><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistfeat>'
+                artistsList += '<artistfeat><a href="/a/' + artists[artist][0].portfolioLINK + '">' + artist + '</a></artistfeat>';
             });
-            tracksHTML += `<reltrack` + ratingTag + `><left><index>` + (latestRelease.tracks.indexOf(track) + 1) + `</index><data><name>` + latestRelease.tracks[latestRelease.tracks.indexOf(track)].title + `</name><artists>` + artistsList + `</artists></data></left><right><playtime>` + latestRelease.tracks[latestRelease.tracks.indexOf(track)].length + `</playtime></right></reltrack>`;
-        })
+
+            tracksHTML += `<reltrack${ratingTag}><left><index>${latestRelease.tracks.indexOf(trackId) + 1}</index><data><name>${track.title}</name><artists>${artistsList}</artists></data></left><right><playtime>${track.length}</playtime></right></reltrack>`;
+        });
     }
     
 

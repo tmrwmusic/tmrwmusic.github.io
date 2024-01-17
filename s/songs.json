@@ -1,0 +1,37 @@
+{
+    "TMRWS00001": {
+        "title": "Star",
+        "artist": {"main": ["Mae Tis"], "featured": []},
+        "length": "02:37",
+        "genre": "Rap",
+        "explicit": true
+    },
+    "TMRWS00002": {
+        "title": "Tell Me",
+        "artist": {"main": ["Mae Tis"], "featured": []},
+        "length": "02:05",
+        "genre": "Rap",
+        "explicit": true
+    },
+    "TMRWS00003": {
+        "title": "4D",
+        "artist": {"main": ["Mae Tis"], "featured": []},
+        "length": "02:12",
+        "genre": "Rap",
+        "explicit": true
+    },
+    "TMRWS00004": {
+        "title": "Nevrátiť sa Späť",
+        "artist": {"main": ["Mae Tis"], "featured": []},
+        "length": "03:12",
+        "genre": "Rap",
+        "explicit": true
+    },
+    "TMRWS00005": {
+        "title": "Zdola Nahor",
+        "artist": {"main": ["Mae Tis", "22Klaosso"], "featured": []},
+        "length": "02:52",
+        "genre": "Rap",
+        "explicit": true
+    }
+}

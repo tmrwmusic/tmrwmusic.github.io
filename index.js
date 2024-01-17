@@ -1,16 +1,17 @@
 async function loadResources() {
     var releases = await fetch("r/releases.json").then(response => response.json());
     var artists = await fetch("a/artists.json").then(response => response.json());
-    setLatestRelease(releases, artists)
+    var songs = await fetch("/s/songs.json").then(response => response.json());
+    setLatestRelease(releases, artists, songs)
 }
 
-function setLatestRelease(releases, artists) {
+function setLatestRelease(releases, artists, songs) {
     const latestRelease = releases[releases.length - 1];
     const latestReleaseHTML = document.querySelector("latestreleasebanner");
 
-    if (latestRelease.tracks.some(track => track.explicit === true)) {
+    if (latestRelease.tracks.some(trackId => songs[trackId].explicit === true)) {
         latestReleaseHTML.classList.add("explicit");
-    };
+    }
 
     let artistsList = "";
 
@@ -24,7 +25,9 @@ function setLatestRelease(releases, artists) {
 
     let totalDurationInSeconds = 0;
 
-    latestRelease.tracks.forEach(track => {
+    latestRelease.tracks.forEach(trackId => {
+        const track = songs[trackId];
+    
         const durationComponents = track.length.split(':');
         const trackDurationInSeconds = parseInt(durationComponents[0]) * 60 + parseInt(durationComponents[1]);
         totalDurationInSeconds += trackDurationInSeconds;

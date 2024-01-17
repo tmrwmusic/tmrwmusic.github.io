@@ -7,15 +7,7 @@
         "release": {
             "date": "2023-11-30"
         },
-        "tracks": [
-            {
-                "title": "Star",
-                "artist": {"main": ["Mae Tis"], "featured": []},
-                "length": "02:37",
-                "genre": "Rap",
-                "explicit": true
-            }
-        ],
+        "tracks": ["TMRWS00001"],
         "colors": ["#0F0F0F", "#D8D8D8"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/2Rwnub6oWOV3czBWKRCAAa",
@@ -33,22 +25,7 @@
         "release": {
             "date": "2023-12-13"
         },
-        "tracks": [
-            {
-                "title": "Tell Me",
-                "artist": {"main": ["Mae Tis"], "featured": []},
-                "length": "02:05",
-                "genre": "Rap",
-                "explicit": true
-            },
-            {
-                "title": "4D",
-                "artist": {"main": ["Mae Tis"], "featured": []},
-                "length": "02:12",
-                "genre": "Rap",
-                "explicit": true
-            }
-        ],
+        "tracks": ["TMRWS00002", "TMRWS00003"],
         "colors": ["#040404", "#C8C8C8"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/3iDQWTgNNDk0LvTRbjZW8p",
@@ -66,15 +43,7 @@
         "release": {
             "date": "2023-12-31"
         },
-        "tracks": [
-            {
-                "title": "Nevrátiť sa Späť",
-                "artist": {"main": ["Mae Tis"], "featured": []},
-                "length": "03:12",
-                "genre": "Rap",
-                "explicit": true
-            }
-        ],
+        "tracks": ["TMRWS00004"],
         "colors": ["#040404", "#D2D0C9"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/0Wk84LzUO0CUJGRGmaWvFs",
@@ -92,15 +61,7 @@
         "release": {
             "date": "2024-01-06"
         },
-        "tracks": [
-            {
-                "title": "Zdola Nahor",
-                "artist": {"main": ["Mae Tis", "22Klaosso"], "featured": []},
-                "length": "02:52",
-                "genre": "Rap",
-                "explicit": true
-            }
-        ],
+        "tracks": ["TMRWS00005"],
         "colors": ["#1B1F27", "#DFE1E6"],
         "platforms": {
             "spotify": "https://open.spotify.com/artist/6oCCE03A3e8SjVEBzhiGHQ",
