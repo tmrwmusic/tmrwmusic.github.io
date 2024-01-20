@@ -33,5 +33,12 @@
         "length": "02:52",
         "genre": "Rap",
         "explicit": true
+    },
+    "TMRWS00006": {
+        "title": "Cosmic Feelings",
+        "artist": {"main": ["Monseyo", "22Klaosso"], "featured": []},
+        "length": "02:38",
+        "genre": "Rap",
+        "explicit": true
     }
 }

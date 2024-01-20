@@ -70,5 +70,23 @@
             "deezer": "https://www.deezer.com/en/album/533745522",
             "soundcloud": "https://soundcloud.com/maetis-music/zdola-nahor"
         }
+    },
+    {
+        "id": "TMRW0005",
+        "artist": {"main": ["Monseyo", "22Klaosso"], "featured": []},
+        "title": "Cosmic Feelings",
+        "type": "single",
+        "release": {
+            "date": "2024-01-20"
+        },
+        "tracks": ["TMRWS00006"],
+        "colors": ["#080808", "#9D9D9D"],
+        "platforms": {
+            "spotify": "https://open.spotify.com/album/0wTkTMDD6Ey69RWkqxUtgT",
+            "itunes": "",
+            "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_lP8FQd2mSBR25vcmWH5I_Y7a091IGqWAg",
+            "deezer": "https://www.deezer.com/en/album/536164802",
+            "soundcloud": "https://soundcloud.com/monseyo-music/cosmic-feelings"
+        }
     }
 ]
