@@ -288,7 +288,7 @@ upcomingreleasebanner.explicit>info2>reltitle::after {
     content: "explicit";
     font-size: 10px;
     margin-left: 5px;
-    padding: 1px 3px;
+    padding: 1px 5px;
     text-transform: uppercase;
     color: var(--LATESTRELEASEPrimaryColor);
     background: var(--LATESTRELEASESecondaryColor);
