@@ -124,8 +124,7 @@ function setUpcomingRelease(releases, artists, songs) {
         if (difference <= 0) {
           // Release time reached
           clearInterval(countdownInterval);
-            setLatestRelease(releases, artists, songs);
-            setUpcomingRelease(releases, artists, songs);
+            loadResources();
           return;
         }
       
