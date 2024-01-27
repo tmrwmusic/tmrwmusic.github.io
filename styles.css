@@ -279,3 +279,16 @@ a:hover {
     color: inherit;
     text-decoration: underline 1px;
 }
+
+upcomingreleasebanner.explicit>info2>reltitle::after {
+    content: "explicit";
+    font-size: 10px;
+    margin-left: 5px;
+    padding: 3px 5px;
+    text-transform: uppercase;
+    color: var(--LATESTRELEASEPrimaryColor);
+    background: var(--LATESTRELEASESecondaryColor);
+    border-radius: 5px;
+    font-family: "Poppins";
+    font-weight: 800;
+}
