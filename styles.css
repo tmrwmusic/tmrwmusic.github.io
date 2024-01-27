@@ -215,8 +215,8 @@ upcomingreleasebanner {
     display: flex;
     flex-direction: column;
     font-family: "Poppins";
-    padding: 15px 50px 30px;
-    height: 255px;
+    padding: 0px 50px 30px;
+    height: 270px;
     align-items: center;
     justify-content: center;
     background-color: var(--LATESTRELEASEPrimaryColor, black);

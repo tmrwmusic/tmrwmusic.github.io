@@ -132,7 +132,7 @@ function setUpcomingRelease(releases, artists, songs) {
         const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
       
-        upcomingReleaseHTML.querySelector('countdown').textContent = `${days}:${hours}:${minutes}:${seconds}`;
+        upcomingReleaseHTML.querySelector('countdown').textContent = `${days}:${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
     }
     
     const countdownInterval = setInterval(() => {
