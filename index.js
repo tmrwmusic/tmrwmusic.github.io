@@ -137,6 +137,6 @@ function setUpcomingRelease(releases, artists, songs) {
     }
     
     const countdownInterval = setInterval(() => {
-        updateCountdown((new Date(new Date(firstUpcomingRelease.release.date).valueOf() + 3*3600*1000)).valueOf());
+        updateCountdown(new Date(firstUpcomingRelease.release.date).valueOf());
       }, 100);
 }
