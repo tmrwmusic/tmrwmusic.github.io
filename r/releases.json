@@ -88,5 +88,23 @@
             "deezer": "https://www.deezer.com/en/album/536164802",
             "soundcloud": "https://soundcloud.com/monseyo-music/cosmic-feelings"
         }
+    },
+    {
+        "id": "TMRW0006",
+        "artist": {"main": ["Mae Tis"], "featured": ["Monseyo", "22Klaosso"]},
+        "title": "Gone",
+        "type": "single",
+        "release": {
+            "date": "2024-02-14"
+        },
+        "tracks": ["TMRWS00007"],
+        "colors": ["#040404", "#CFCFCF"],
+        "platforms": {
+            "spotify": "",
+            "itunes": "",
+            "youtubemusic": "",
+            "deezer": "",
+            "soundcloud": ""
+        }
     }
 ]

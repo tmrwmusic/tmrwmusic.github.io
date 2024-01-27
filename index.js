@@ -2,11 +2,13 @@ async function loadResources() {
     var releases = await fetch("r/releases.json").then(response => response.json());
     var artists = await fetch("a/artists.json").then(response => response.json());
     var songs = await fetch("/s/songs.json").then(response => response.json());
-    setLatestRelease(releases, artists, songs)
+    setLatestRelease(releases, artists, songs);
 }
 
 function setLatestRelease(releases, artists, songs) {
-    const latestRelease = releases[releases.length - 1];
+    const today = new Date().toISOString().split('T')[0];
+    const filteredReleases = releases.filter(release => release.release.date <= today);
+    const latestRelease = filteredReleases[filteredReleases.length - 1];
     const latestReleaseHTML = document.querySelector("latestreleasebanner");
 
     if (latestRelease.tracks.some(trackId => songs[trackId].explicit === true)) {

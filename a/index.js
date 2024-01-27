@@ -27,7 +27,13 @@ async function loadResources() {
 }
 
 function setLatestRelease(releases, artists, songs) {
-    const latestRelease = releases[releases.length - 1];
+    const today = new Date().toISOString().split('T')[0];
+
+    // Filter releases to include only those with release dates before or equal to today
+    const filteredReleases = releases.filter(release => release.release.date <= today);
+
+    // Treat the last item in the filtered array as the latest release
+    const latestRelease = filteredReleases[filteredReleases.length - 1];
     const latestReleaseHTML = document.querySelector("newest");
 
     if (latestRelease.tracks.some(trackId => songs[trackId].explicit === true)) {
