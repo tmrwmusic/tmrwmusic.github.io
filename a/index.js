@@ -120,7 +120,11 @@ function setLatestRelease(releases, artists, songs) {
 }
 
 function showReleases(releases, artists) {
-    const olderReleasesArray = releases.slice(0, -1).reverse();
+    const today = new Date().toISOString().split('T')[0];
+
+    // Filter releases to include only those with release dates before or equal to today
+    const filteredReleases = releases.filter(release => release.release.date <= today);
+    const olderReleasesArray = filteredReleases.slice(0, -1).reverse();
     var pageHTML = document.querySelector("body").querySelector("page");
 
     olderReleasesArray.forEach((release) => {
