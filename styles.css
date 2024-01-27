@@ -252,6 +252,10 @@ upcomingreleasebanner>cover {
 upcomingreleasebanner reltitle {
     font-weight: 900;
     font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 upcomingreleasebanner extrainfo {
@@ -284,7 +288,7 @@ upcomingreleasebanner.explicit>info2>reltitle::after {
     content: "explicit";
     font-size: 10px;
     margin-left: 5px;
-    padding: 3px 5px;
+    padding: 1px 3px;
     text-transform: uppercase;
     color: var(--LATESTRELEASEPrimaryColor);
     background: var(--LATESTRELEASESecondaryColor);
