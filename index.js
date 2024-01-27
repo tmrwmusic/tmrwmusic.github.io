@@ -119,7 +119,7 @@ function setUpcomingRelease(releases, artists, songs) {
         const now = new Date();
         const timezoneOffset = now.getTimezoneOffset() * 60000;
         const localNow = new Date(now + timezoneOffset);
-        const difference = endTime - localNow;
+        const difference = Date(endTime) - localNow;
       
         if (difference <= 0) {
           // Release time reached
@@ -137,6 +137,6 @@ function setUpcomingRelease(releases, artists, songs) {
     }
     
     const countdownInterval = setInterval(() => {
-        updateCountdown(new Date(new Date("2024-02-14").valueOf() + 3*3600*1000));
+        updateCountdown(new Date(new Date(firstUpcomingRelease.release.date).valueOf() + 3*3600*1000));
       }, 100);
 }
