@@ -211,6 +211,14 @@ hero:has(upcomingreleasebanner.inactive)>latestreleasebanner {
 }
 
 upcomingreleasebanner {
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    user-drag: none;
+    -webkit-user-drag: none;
+
+
     width: calc(25% - 100px);
     display: flex;
     flex-direction: column;
