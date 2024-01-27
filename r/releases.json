@@ -83,7 +83,7 @@
         "colors": ["#080808", "#9D9D9D"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/0wTkTMDD6Ey69RWkqxUtgT",
-            "itunes": "",
+            "itunes": "https://music.apple.com/no/album/cosmic-feelings-single/1726398138",
             "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_lP8FQd2mSBR25vcmWH5I_Y7a091IGqWAg",
             "deezer": "https://www.deezer.com/en/album/536164802",
             "soundcloud": "https://soundcloud.com/monseyo-music/cosmic-feelings"
