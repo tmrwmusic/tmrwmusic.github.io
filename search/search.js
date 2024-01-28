@@ -18,10 +18,8 @@ async function placeholderReplace() {
         prompts.push(song);
         prompts.push(songs[song].title);
     }
-
-    setInterval(function() {
-        var input = document.querySelector('search>input[type="text"]');
-            var randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
-            input.placeholder = randomPrompt;
-    }, 937.5);
+    
+    var input = document.querySelector('search>input[type="text"]');
+    var randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
+    input.placeholder = randomPrompt;
 }
