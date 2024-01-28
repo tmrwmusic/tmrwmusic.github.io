@@ -106,5 +106,23 @@
             "deezer": "",
             "soundcloud": ""
         }
+    },
+    {
+        "id": "TMRW0007",
+        "artist": {"main": ["Mae Tis"], "featured": []},
+        "title": "404",
+        "type": "ep",
+        "release": {
+            "date": "2024-02-29"
+        },
+        "tracks": ["TMRWS00008", "TMRWS00009", "TMRWS00010", "TMRWS00011"],
+        "colors": ["#10142B", "#8B6158"],
+        "platforms": {
+            "spotify": "",
+            "itunes": "",
+            "youtubemusic": "",
+            "deezer": "",
+            "soundcloud": ""
+        }
     }
 ]

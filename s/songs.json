@@ -47,5 +47,33 @@
         "length": "04:19",
         "genre": "Rap",
         "explicit": true
+    },
+    "TMRWS00008": {
+        "title": "Celú Noc Hore",
+        "artist": {"main": ["Mae Tis"], "featured": []},
+        "length": "02:48",
+        "genre": "Rap",
+        "explicit": true
+    },
+    "TMRWS00009": {
+        "title": "Vans",
+        "artist": {"main": ["Mae Tis"], "featured": ["FlyJungeMraza"]},
+        "length": "02:09",
+        "genre": "Rap",
+        "explicit": true
+    },
+    "TMRWS00010": {
+        "title": "Not Found",
+        "artist": {"main": ["Mae Tis"], "featured": []},
+        "length": "02:10",
+        "genre": "Rap",
+        "explicit": true
+    },
+    "TMRWS00011": {
+        "title": "Through Everything (Remix)",
+        "artist": {"main": ["Mae Tis"], "featured": ["Monseyo", "22Klaosso"]},
+        "length": "02:53",
+        "genre": "Rap",
+        "explicit": true
     }
 }
