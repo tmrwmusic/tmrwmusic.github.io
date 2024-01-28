@@ -23,5 +23,5 @@ async function placeholderReplace() {
         var input = document.querySelector('search>input[type="text"]');
             var randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
             input.placeholder = randomPrompt;
-    }, 1000);
+    }, 937.5);
 }
