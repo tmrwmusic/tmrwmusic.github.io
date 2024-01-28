@@ -40,8 +40,8 @@ header {
     & left {
         padding: 0px 0px 0px 20px;
         & a {
-            all: unset;
-            cursor: pointer;
+            all: unset !important;
+            cursor: pointer !important;
             & logo {
                 font-family: "Horizon";
                 line-height: 0.70;
