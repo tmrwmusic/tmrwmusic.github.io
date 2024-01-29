@@ -115,7 +115,7 @@
         "release": {
             "date": "2024-02-29"
         },
-        "tracks": ["TMRWS00008", "TMRWS00009", "TMRWS00010", "TMRWS00011"],
+        "tracks": ["TMRWS00008", "TMRWS00009", "TMRWS00010"],
         "colors": ["#10142B", "#8B6158"],
         "platforms": {
             "spotify": "",
