@@ -7,7 +7,7 @@ async function loadResources() {
 }
 
 function setLatestRelease(releases, artists, songs) {
-    const today = new Date().toISOString().split('T')[0];
+    const today = new Date(new Date() - new Date().getTimezoneOffset()*60000).toISOString().split('T')[0];
     const filteredReleases = releases.filter(release => release.release.date <= today);
     const latestRelease = filteredReleases[filteredReleases.length - 1];
     const latestReleaseHTML = document.querySelector("latestreleasebanner");
@@ -61,7 +61,7 @@ function setLatestRelease(releases, artists, songs) {
 }
 
 function setUpcomingRelease(releases, artists, songs) {
-    const today = new Date().toISOString().split('T')[0];
+    const today = new Date(new Date() - new Date().getTimezoneOffset()*60000).toISOString().split('T')[0];
     const upcomingReleases = releases.filter(release => release.release.date >= today);
     const firstUpcomingRelease = upcomingReleases[0];
     const upcomingReleaseHTML = document.querySelector("upcomingreleasebanner");
