@@ -62,7 +62,7 @@ function setLatestRelease(releases, artists, songs) {
 
 function setUpcomingRelease(releases, artists, songs) {
     const today = new Date(new Date() - new Date().getTimezoneOffset()*60000).toISOString().split('T')[0];
-    const upcomingReleases = releases.filter(release => release.release.date >= today);
+    const upcomingReleases = releases.filter(release => release.release.date > today);
     const firstUpcomingRelease = upcomingReleases[0];
     const upcomingReleaseHTML = document.querySelector("upcomingreleasebanner");
 
