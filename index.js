@@ -118,7 +118,7 @@ function setUpcomingRelease(releases, artists, songs) {
     function updateCountdown(endTime) {
         const now = new Date();
         const timezoneOffset = now.getTimezoneOffset() * 60000;
-        const localNow = new Date(now.valueOf() + timezoneOffset).valueOf();
+        const localNow = new Date(now.valueOf() - timezoneOffset).valueOf();
         const difference = new Date(endTime).valueOf() - localNow;
       
         if (difference <= 0) {
