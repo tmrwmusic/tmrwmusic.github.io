@@ -15,12 +15,9 @@ logo {
     animation: neonLighting 5s linear 0s infinite;
 }
 
-logo>outline {
-    font-family: "Horizon";
-}
-
-logo.neon>outline {
+logo:not(:hover)>outline {
     font-family: "Horizon Outline";
+    animation: neonBlinking 1.5s cubic-bezier(0.65, 0.05, 0.36, 1) 0s alternate infinite;
 }
 
 body {
@@ -52,6 +49,36 @@ header {
                 flex-direction: column;
             }
         }
+    }
+}
+
+@keyframes neonBlinking {
+    0% {
+        font-family: "Horizon Outline";
+    }
+
+    23% {
+        font-family: "Horizon";
+    }
+
+    33% {
+        font-family: "Horizon Outline";
+    }
+
+    66% {
+        font-family: "Horizon";
+    }
+
+    70% {
+        font-family: "Horizon Outline";
+    }
+
+    74% {
+        font-family: "Horizon";
+    }
+
+    82% {
+        font-family: "Horizon Outline";
     }
 }
 
