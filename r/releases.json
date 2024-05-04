@@ -11,7 +11,7 @@
         "colors": ["#0F0F0F", "#D8D8D8"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/2Rwnub6oWOV3czBWKRCAAa",
-            "itunes": "https://music.apple.com/us/album/star-single/1716418671",
+            "itunes": "https://music.apple.com/album/star-single/1716418671",
             "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_l2hJ1MLGNIqkTvFqiQ7BaZh02H9SMwBz4",
             "deezer": "https://www.deezer.com/en/album/512204661",
             "soundcloud": "https://soundcloud.com/maetis-music/star"
@@ -29,7 +29,7 @@
         "colors": ["#040404", "#C8C8C8"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/3iDQWTgNNDk0LvTRbjZW8p",
-            "itunes": "https://music.apple.com/no/album/tell-me-4d-single/1721034715",
+            "itunes": "https://music.apple.com/album/tell-me-4d-single/1721034715",
             "youtubemusic": "https://www.youtube.com/playlist?list=OLAK5uy_mmz1hpgJzxsDaA--HLgM9fJcVuQALmCl4",
             "deezer": "https://www.deezer.com/en/album/523042722",
             "soundcloud": "https://soundcloud.com/maetis-music/sets/tell-me-x-4d"
@@ -47,7 +47,7 @@
         "colors": ["#040404", "#D2D0C9"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/0Wk84LzUO0CUJGRGmaWvFs",
-            "itunes": "https://music.apple.com/no/album/nevr%C3%A1ti%C5%A5-sa-sp%C3%A4%C5%A5-single/1724174125",
+            "itunes": "https://music.apple.com/album/nevr%C3%A1ti%C5%A5-sa-sp%C3%A4%C5%A5-single/1724174125",
             "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_meE1dDatAIVSdkPOV59XF_rlOj5ps0q-I",
             "deezer": "https://www.deezer.com/en/album/531019242",
             "soundcloud": "https://soundcloud.com/maetis-music/nevr-ti-sa-sp"
@@ -65,7 +65,7 @@
         "colors": ["#1B1F27", "#DFE1E6"],
         "platforms": {
             "spotify": "https://open.spotify.com/artist/6oCCE03A3e8SjVEBzhiGHQ",
-            "itunes": "https://music.apple.com/no/album/zdola-nahor-single/1725290942",
+            "itunes": "https://music.apple.com/album/zdola-nahor-single/1725290942",
             "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_mizErvm5IJX31OJEB3A5c5S5tfjWLwi1Q",
             "deezer": "https://www.deezer.com/en/album/533745522",
             "soundcloud": "https://soundcloud.com/maetis-music/zdola-nahor"
@@ -83,7 +83,7 @@
         "colors": ["#080808", "#9D9D9D"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/0wTkTMDD6Ey69RWkqxUtgT",
-            "itunes": "https://music.apple.com/no/album/cosmic-feelings-single/1726398138",
+            "itunes": "https://music.apple.com/album/cosmic-feelings-single/1726398138",
             "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_lP8FQd2mSBR25vcmWH5I_Y7a091IGqWAg",
             "deezer": "https://www.deezer.com/en/album/536164802",
             "soundcloud": "https://soundcloud.com/monseyo-music/cosmic-feelings"
@@ -100,11 +100,11 @@
         "tracks": ["TMRWS00007"],
         "colors": ["#040404", "#CFCFCF"],
         "platforms": {
-            "spotify": "",
-            "itunes": "",
-            "youtubemusic": "",
-            "deezer": "",
-            "soundcloud": ""
+            "spotify": "https://open.spotify.com/album/2zyygtfQQ3b2tdEWyGa6Bc",
+            "itunes": "https://music.apple.com/album/gone-single/1728032678",
+            "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_kpzADzgL-NCIXwH5HuCXKYiCpPsNtdZI8&",
+            "deezer": "https://www.deezer.com/en/album/540284012",
+            "soundcloud": "https://soundcloud.com/maetis-music/gone-feat-22klaosso-monseyo"
         }
     },
     {
@@ -118,11 +118,29 @@
         "tracks": ["TMRWS00008", "TMRWS00009", "TMRWS00010"],
         "colors": ["#10142B", "#8B6158"],
         "platforms": {
-            "spotify": "",
+            "spotify": "https://open.spotify.com/album/0kpaaLuDNUP8lOacaShkJG",
+            "itunes": "https://music.apple.com/album/404-single/1728776582",
+            "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_mlgtJP76GigubEA1F7nqvL9_yl2s7d2fI&si=p3_JYKh2Mjg9EFnU",
+            "deezer": "https://www.deezer.com/en/album/542678772",
+            "soundcloud": "https://soundcloud.com/maetis-music/sets/404-990490182"
+        }
+    },
+    {
+        "id": "TMRW0008",
+        "artist": {"main": ["Mae Tis"], "featured": []},
+        "title": "Dýcham",
+        "type": "single",
+        "release": {
+            "date": "2024-04-01"
+        },
+        "tracks": ["TMRWS00011", "TMRWS00011-1", "TMRWS00011-2"],
+        "colors": ["#131313", "#99080A"],
+        "platforms": {
+            "spotify": "https://open.spotify.com/album/6nKELiW6Fw5qRMnIxkVSeS",
             "itunes": "",
-            "youtubemusic": "",
-            "deezer": "",
-            "soundcloud": ""
+            "youtubemusic": "https://music.youtube.com/playlist?list=OLAK5uy_kakzMR8UrTV6GzEbwCCn_UugXwo3Qp1go",
+            "deezer": "https://www.deezer.com/en/album/581029811",
+            "soundcloud": "https://soundcloud.com/maetis-music/sets/dycham"
         }
     }
 ]
