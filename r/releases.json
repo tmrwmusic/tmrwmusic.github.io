@@ -116,7 +116,7 @@
             "date": "2024-02-29"
         },
         "tracks": ["TMRWS00008", "TMRWS00009", "TMRWS00010"],
-        "colors": ["#10142B", "#8B6158"],
+        "colors": ["#8B6158", "#10142B"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/0kpaaLuDNUP8lOacaShkJG",
             "itunes": "https://music.apple.com/album/404-single/1728776582",
@@ -134,7 +134,7 @@
             "date": "2024-04-01"
         },
         "tracks": ["TMRWS00011", "TMRWS00011-1", "TMRWS00011-2"],
-        "colors": ["#131313", "#99080A"],
+        "colors": ["#99080A", "#131313"],
         "platforms": {
             "spotify": "https://open.spotify.com/album/6nKELiW6Fw5qRMnIxkVSeS",
             "itunes": "",
