@@ -34,16 +34,9 @@
         "genre": "Rap",
         "explicit": true
     },
-    "TMRWS00006": {
-        "title": "Cosmic Feelings",
-        "artist": {"main": ["Monseyo", "22Klaosso"], "featured": []},
-        "length": "02:38",
-        "genre": "Rap",
-        "explicit": true
-    },
     "TMRWS00007": {
         "title": "Gone",
-        "artist": {"main": ["Mae Tis"], "featured": ["Monseyo", "22Klaosso"]},
+        "artist": {"main": ["Mae Tis"], "featured": []},
         "length": "04:19",
         "genre": "Rap",
         "explicit": true
